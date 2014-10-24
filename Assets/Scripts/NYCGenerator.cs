@@ -21,16 +21,7 @@ public class NYCGenerator : MonoBehaviour {
 						Application.LoadLevel (0);
 				}
 		}
-//
-//		int charSoFar = 0;
-//		
-//		while (charSoFar < 10) {
-//			Instantiate (cube, new Vector3 (charSoFar * 2.0F, 0, 0), Random.rotation);
-//			charSoFar++;
-//		}
-//
-//
-//	}
+
 	
 	IEnumerator CubeGenerator(){
 		int charSoFar = 0;
@@ -39,27 +30,7 @@ public class NYCGenerator : MonoBehaviour {
 		int counter = 0;
 
 		float randomNumber;
-		
-//		while (true) {
-//			if(Random.Range(0, 10f) < 5f){
-//				textMesh.text += "\\"; // two backslashes is an escaping character because \n is a special code
-//				Instantiate(cube1, new Vector3 (Random.Range (-10, 10f), 0, charSoFar + Random.Range (-9, 2.0f)), Quaternion.identity);
-//				charSoFar ++;
-//				
-//			}
-//			else {
-//				textMesh.text += "/";
-//				Instantiate(cube2, new Vector3 (Random.Range (-10, 10f), 0, charSoFar + Random.Range (-10, 5.0f)), Quaternion.identity);
-//
-//			}
-//			if (charSoFar >= 10){
-//				textMesh.text += "\n";
-//				charSoFar = 0; //reset the counter
-//			}
-//			
-//			yield return new WaitForSeconds(0.5f); //tells unity to take a break
-//			
-//		}
+	
 
 		while (counter < 100) {
 
@@ -67,14 +38,14 @@ public class NYCGenerator : MonoBehaviour {
 
 			if(randomNumber < 2f){
 				//empire state
-				Instantiate(cube1, new Vector3 (positionX + Random.Range(-7, 0f), 0, positionZ), Quaternion.identity);
+				Instantiate(cube1, new Vector3 (positionX + Random.Range(-5, 0f), 0, positionZ), Quaternion.identity);
 				positionX ++;
 				positionZ ++;
 			}
 
 			if(randomNumber < 4f && randomNumber >= 2f){
 				//bridge
-				Instantiate(cube2, new Vector3 (positionX + 6, 0, positionZ + 13), Quaternion.identity);
+				Instantiate(cube2, new Vector3 (positionX + 11, 0, positionZ + 13), Quaternion.identity);  //positionX + ___, posiitonz ___ keeps it in the East River
 				positionX ++;
 				positionZ ++;
 			}
